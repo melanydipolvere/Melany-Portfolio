@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Melany Di Polvere Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="header__menu">
+                <li class="header__item">
+                    <a class="header__link home" href="../index.html">HOME</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link work" href="./work.html">WORK</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link about" href="./aboutme.html">ABOUT ME</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link galery" href="./skills.html">SKILLS</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link contact selected" href="./contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="row form-title">
+            <h2>Say Hi!</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quia labore dolorum quaerat.
+            </p>
+        </div>
+        <div class="row">
+            <div class="form-row">
+                <div class="container-name">
+                    <div class="form-name">
+                        <label for="name" class="label-form">Name*</label>
+                        <input type="text" name="name" placeholder="First">
+                    </div>
+                    <div class="form-name">
+                        <label for="surname" class="label-form">&nbsp;</label>
+                        <input type="text" name="surname" id="surname" placeholder="Last">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="mail" class="label-form">Email</label>
+                <input type="email" name="mail" id="mail" placeholder="Email">
+            </div>
+            <div class="form-row">
+                <label for="message" class="label-form">Message</label>
+                <textarea name="message" placeholder="Enter your message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="container-sa">
+                <div class="form-row">
+
+                    <input type="submit" value="SUBMIT" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Your data is ready</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you included everything you wanted?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </section>
+    <footer class="footer">
+        <div>
+            <p>© Creado por Melany Di Polvere</p>
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/in/melany-di-polvere-408006213/">Linkedin</a>
+            <a href="https://www.behance.net/melanydipolvere">Behance</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
