@@ -119,9 +119,22 @@ h2 {
     text-transform: none;
     margin-top: 30px;
     margin-bottom: 10px;
+    
 }
 
-
+.grid-container {
+    padding-right: 0%;
+    font-size: 18px;
+    font-family: 'Avenir Next', sans-serif;
+    color: #000;
+    font-weight: 50;
+    text-align: left;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 150px;    
+}
 .image-container img {
     width: 60vw;
     margin-right: auto;
@@ -321,3 +334,7 @@ footer a {
     justify-content: center;
     margin: 0%auto;
 }
+
+/* Tu CSS actual aquí */
+
+
