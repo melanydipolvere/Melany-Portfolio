@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+
 body {
     background-color: #f6f2ee;
     font-family: Montserrat, sans-serif;
@@ -24,6 +35,7 @@ body {
 .header__menu {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     padding: 1rem;
 }
@@ -108,33 +120,37 @@ h2 {
 /* Estilo para el párrafo */
 .paragraph {
     padding-right: 0;
-    font-size: 18px;
-    margin-right: 800px;
     margin-left: 80px;
     font-family: 'Avenir Next', sans-serif;
-    color: #000;
-    font-weight: 30;
     text-align: left;
     letter-spacing: 0.05em;
     text-transform: none;
     margin-top: 30px;
     margin-bottom: 10px;
-    
+
+    color: #1a1b1f;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+
 }
 
 .grid-container {
     padding-right: 0%;
-    font-size: 18px;
     font-family: 'Avenir Next', sans-serif;
-    color: #000;
-    font-weight: 30;
     text-align: left;
     letter-spacing: 0.05em;
     text-transform: none;
     margin-top: 20px;
     margin-bottom: 10px;
-    margin-right: 55px;    
+    margin-right: 55px;
+
+    color: #1a1b1f;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
 }
+
 .image-container img {
     width: 60vw;
     margin-right: auto;
@@ -166,8 +182,9 @@ h2 {
 }
 
 footer a:hover {
-    color: #007bff; 
+    color: #007bff;
 }
+
 .input-name {
     display: inline;
 }
@@ -206,14 +223,16 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Asegura que el footer esté por encima del contenido */
+    border-top: 1px solid #80808017;
+    z-index: 1000;
+    /* Asegura que el footer esté por encima del contenido */
 }
 
 footer a {
     text-decoration: none;
     color: inherit;
     margin: 1rem;
-    
+
 }
 
 
@@ -327,14 +346,132 @@ footer a {
     margin: 0%auto;
 }
 
-.container-sa {
-    margin-right: 700px;
-    margin-left: 185px;
+.container-sa p {
+    margin: 2rem;
+}
+
+.h2-skills {
+    margin: 2rem;
+}
+
+.skills-container {
     display: flex;
     justify-content: center;
-    margin: 0%auto;
+
+    width: 95%;
+    /* margin: 1rem; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.skills-container ul {
+    margin: 2rem;
+    width: 500px;
+}
+
+.skills-container li {
+    color: #2f344d;
+}
+
+
+.formContainer {
+    margin-bottom: 100px;
 }
 
 /* Tu CSS actual aquí */
+#check {
+    display: none;
+}
+
+.checkbuton {
+    background-image: url('../image/menuHamburguesa.png');
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    position: fixed;
+    top: 0%;
+    right: 5%;
+    display: none;
+}
+
+@media only screen and (max-width: 730px) {
+
+    /* NAV */
+
+    .checkbuton {
+        display: block;
+        z-index: 10;
+    }
+
+    nav ul {
+        z-index: 9;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 50vw;
+        height: 100vh;
+        text-align: center;
+        transition: all 0.3s;
+        background-color: #eecfaeed;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    /* ~ul */
+    #check:checked~ul {
+        right: 0;
+    }
+
+    .header__menu {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 
 
+
+    .image-container img {
+        width: 80vw;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header__titulo {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .paragraph {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .h2-p {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .grid-container {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .form-title {
+        text-align: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .container-name{
+        flex-direction: column;
+    }
+
+    .form-name{
+        width: 100% !important;
+    }
+
+
+
+}
