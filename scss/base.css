@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* ACA LOS IMPORTS */
+/* COLORES */
+/* ACA LO QUE VA PARA TODOS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f6f2ee;
+  font-family: Montserrat, sans-serif;
+  color: #1a1b1f;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.body-home {
+  background-image: url("../image/sinfondo.png");
+  background-size: cover;
+}
+
+.header__titulo {
+  position: static;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  font-family: "Bodoni Moda", serif;
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: 500;
+  text-transform: none;
+  color: #2f344d;
+}
+
+.header__link {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #222222;
+  text-decoration: none;
+  padding: 9px 20px;
+  transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+}
+
+.header__link:hover {
+  color: #000000;
+  background-color: #ebdac6;
+  border-color: #ef9c03;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+}
+
+/* NAV */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+nav ul li {
+  margin-left: 30px;
+}
+nav ul li a {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #222222;
+  text-decoration: none;
+  padding: 9px 20px;
+  transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+}
+nav ul li a.selected {
+  border: 1px solid #ef9c03;
+  opacity: 1;
+  color: #1a1b1f;
+  font-weight: 400;
+  background-color: #f6f2ee;
+}
+nav ul li a:hover {
+  color: #000000;
+  background-color: #ebdac6;
+  border-color: #ef9c03;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
+}
+.container h2 {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Bodoni Moda", serif;
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: 500;
+  text-transform: none;
+  color: #2f344d;
+}
+
+#check {
+  display: none;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #636677;
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgba(128, 128, 128, 0.0901960784);
+  z-index: 1000;
+  /* Asegura que el footer esté por encima del contenido */
+}
+footer a {
+  text-decoration: none;
+  color: inherit;
+  margin: 1rem;
+}
+footer a:hover {
+  color: #007bff;
+}
+
+.footer {
+  margin-bottom: 0;
+  -webkit-mask-position: fixed;
+          mask-position: fixed;
+}
+
+/* Mobile */
+@media only screen and (max-width: 730px) {
+  .checkbuton {
+    display: block;
+    z-index: 10;
+  }
+  nav ul {
+    z-index: 9;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    text-align: center;
+    transition: all 0.3s;
+    background-color: rgba(238, 207, 174, 0.9294117647);
+    border-radius: 10px 0px 0px 10px;
+  }
+  .checkbuton {
+    background-image: url("../image/menuHamburguesa.png");
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    position: fixed;
+    top: 0%;
+    right: 5%;
+  }
+  #check {
+    display: none;
+  }
+  /* ~ul */
+  #check:checked ~ ul {
+    right: 0;
+  }
+  .header__menu {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .image-container img {
+    width: 80vw !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .header__titulo {
+    margin-left: 0;
+    text-align: center;
+  }
+  .paragraph {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .h2-p {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .grid-container {
+    margin-right: 0;
+    text-align: center;
+  }
+  .form-title {
+    text-align: center;
+  }
+  .skills-container {
+    flex-direction: column;
+  }
+  .container-name {
+    flex-direction: column;
+  }
+  .form-name {
+    width: 100% !important;
+  }
+}
+.grid-container {
+  padding-right: 0%;
+  font-family: "Avenir Next", sans-serif;
+  text-align: left;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 55px;
+  color: #1a1b1f;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.form-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 30px;
+}
+
+.formContainer {
+  margin-bottom: 100px;
+}
+
+.form-row {
+  display: inline-block;
+  gap: 10px;
+  line-height: 1;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.container-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-name {
+  width: 48% !important;
+}
+
+.form-name-2 {
+  width: 100% !important;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 5px;
+  display: block;
+  width: 100%;
+}
+
+.form-row {
+  display: inline-block;
+  gap: 10px;
+  line-height: 1;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.submit {
+  background-color: #ef9c03;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 50px;
+  cursor: pointer;
+  transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease;
+  width: auto;
+  margin-top: 10px;
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0% auto;
+}
+
+.submit:hover {
+  background-color: transparent;
+  border: 1px solid #d68c03;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  margin: 0% auto;
+}
+
+.label-form {
+  display: block;
+}
+
+.paragraph {
+  padding-right: 0;
+  margin-left: 80px;
+  font-family: "Avenir Next", sans-serif;
+  text-align: left;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #1a1b1f;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  width: 60vw;
+}
+
+.container-sa p {
+  margin: 2rem;
+}
+.container-sa .skills-container {
+  display: flex;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-sa .skills-container ul {
+  margin: 2rem;
+  width: 500px;
+}
+.container-sa .skills-container ul li {
+  color: #2f344d;
+}
+
+.skills-text {
+  margin-left: 80px;
+  max-width: 800px;
+}
+
+.image-container {
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.image-container img {
+  width: 60vw;
+  margin-right: auto;
+  margin-left: auto;
+  transition: 1s;
+}
+.image-container img:hover {
+  transform: scale(1.05, 1.05);
+}/*# sourceMappingURL=base.css.map */

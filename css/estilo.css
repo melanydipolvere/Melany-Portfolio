@@ -220,7 +220,6 @@ footer {
   right: 0;
   border-top: 1px solid rgba(128, 128, 128, 0.0901960784);
   z-index: 1000;
-  /* Asegura que el footer esté por encima del contenido */
 }
 
 footer a {

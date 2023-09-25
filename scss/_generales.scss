@@ -1,0 +1,306 @@
+/* ACA LO QUE VA PARA TODOS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+}
+
+body {
+    background-color: $color-whitish;
+    font-family: Montserrat, sans-serif;
+    color: #1a1b1f;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.body-home {
+    background-image: url("../image/sinfondo.png");
+    background-size: cover;
+}
+
+
+
+.header__titulo {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: 500;
+    text-transform: none;
+    color: $color-very-dark-blue2;
+}
+
+.header__link {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-blackish;
+    text-decoration: none;
+    padding: 9px 20px;
+    transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+}
+
+.header__link:hover {
+    color: $color-black;
+    background-color: $color-light-brown2;
+    border-color: $color-orange2;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+}
+
+
+
+
+
+
+/* NAV */
+
+nav {
+
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding: 1rem;
+
+        li {
+            margin-left: 30px;
+
+            a {
+                font-family: 'Avenir Next', sans-serif;
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #222222;
+                text-decoration: none;
+                padding: 9px 20px;
+                transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+            }
+
+            a.selected {
+                border: 1px solid #ef9c03;
+                opacity: 1;
+                color: #1a1b1f;
+                font-weight: 400;
+                background-color: #f6f2ee;
+            }
+
+            a:hover {
+                color: #000000;
+                background-color: #ebdac6;
+                border-color: #ef9c03;
+            }
+        }
+    }
+
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+
+    h2 {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-family: "Bodoni Moda", serif;
+        font-size: 60px;
+        line-height: 80px;
+        font-weight: 500;
+        text-transform: none;
+        color: $color-very-dark-blue2;
+    }
+
+}
+
+
+
+
+
+
+#check {
+    display: none;
+}
+
+
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: #636677;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.0901960784);
+    z-index: 1000;
+    /* Asegura que el footer esté por encima del contenido */
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        margin: 1rem;
+    }
+
+    a:hover {
+        color: #007bff;
+    }
+
+}
+
+.footer {
+    margin-bottom: 0;
+    mask-position: fixed;
+}
+
+
+
+
+
+/* Mobile */
+
+@media only screen and (max-width: 730px) {
+    .checkbuton {
+        display: block;
+        z-index: 10;
+    }
+
+    nav {
+        ul {
+            z-index: 9;
+            position: fixed;
+            right: -100%;
+            top: 0;
+            width: 50vw;
+            height: 100vh;
+            text-align: center;
+            transition: all 0.3s;
+            background-color: #eecfaeed;
+            border-radius: 10px 0px 0px 10px;
+        }
+    }
+    
+    .checkbuton {
+        background-image: url('../image/menuHamburguesa.png');
+        background-size: contain;
+        height: 50px;
+        width: 50px;
+        font-size: 30px;
+        position: fixed;
+        top: 0%;
+        right: 5%;
+    }
+    
+    #check {
+        display: none;
+    }
+
+    /* ~ul */
+    #check:checked~ul {
+        right: 0;
+    }
+
+
+
+    .header__menu {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+
+
+    .image-container {
+        img {
+        width: 80vw !important;
+        margin-right: auto;
+        margin-left: auto;
+
+
+        }
+    }
+
+    .header__titulo {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .paragraph {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .h2-p {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    
+    .grid-container {
+        margin-right: 0;
+        text-align: center;
+    }
+
+
+    .form-title {
+        text-align: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .container-name {
+        flex-direction: column;
+    }
+
+    .form-name {
+        width: 100% !important;
+    }
+
+
+}
